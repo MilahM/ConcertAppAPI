@@ -6,6 +6,17 @@ namespace ConcertAPI
 {
     public class EventByArtistRepository : IEventByArtistRepository
     {
+        public EventByArtistRepository()
+        {
+            string auth = File.ReadAllText("appsettings.json");
+
+            string authKey = JObject.Parse(auth).GetValue("client_id").ToString();
+
+            var artistName = Console.ReadLine();
+
+            string apiCall = $"https://api.seatgeek.com/2/events?performers.slug={artistName}&client_id={authKey}";
+        }
+
         private readonly HttpClient _client;
 
         public EventByArtistRepository(HttpClient client)
@@ -33,7 +44,5 @@ namespace ConcertAPI
 
             return events;
         }
-
-
-    }
+    }    
 }

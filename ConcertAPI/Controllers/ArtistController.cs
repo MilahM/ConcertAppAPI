@@ -14,9 +14,10 @@ namespace ConcertAPI.Controllers
         {
             return View();
         }
-        public IActionResult ArtistEvents()
+        public IActionResult ArtistEvents(string apiCall)
         {
-
+            var events = repo.GetEventByArtist(apiCall);
+            return View(events);
         }
        
     }

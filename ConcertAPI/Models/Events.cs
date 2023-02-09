@@ -1,4 +1,6 @@
-﻿namespace ConcertAPI.Models
+﻿using Newtonsoft.Json.Linq;
+
+namespace ConcertAPI.Models
 {
     public class Events
     {

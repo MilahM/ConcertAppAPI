@@ -2,9 +2,9 @@
 
 <h2>Events</h2>
 
-@*<div style="display: block">
-    <a href="/Events/InsertProduct/">Events</a>
-</div>*@
+<div style="display: block">
+    <a href="/Events/ArtistEvents/">Events</a>
+</div>
 
 <table class="table">
     <tr>
@@ -17,7 +17,7 @@
     @foreach (var item in @events)
     {
         <tr>
-            <td><a href=/Events/ViewProduct/@item.Type>@item.Type</a></td>
+            <td><a href=/Events/ArtistEvents/@item.Type>@item.Type</a></td>
             <td>@item.Type</td>
             <td>@item.Date/Time</td>
             <td>@item.Venue</td>
