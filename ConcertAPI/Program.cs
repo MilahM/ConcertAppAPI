@@ -1,3 +1,5 @@
+using Newtonsoft.Json.Linq;
+
 namespace ConcertAPI
 {
     public class Program
@@ -25,7 +27,6 @@ namespace ConcertAPI
             app.UseHttpsRedirection();
 
             app.UseAuthorization();
-
 
             app.MapControllers();
 

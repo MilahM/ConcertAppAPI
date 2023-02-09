@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 
 namespace ConcertAPI
 {
-    public class EventByArtistRepository
+    public class EventByArtistRepository : IEventByArtistRepository
     {
         private readonly HttpClient _client;
 
@@ -12,7 +12,8 @@ namespace ConcertAPI
         {
             _client = client;
         }
-        public static List<Events> GetEventByArtist(string apiCall)
+
+        public List<Events> GetEventByArtist(string apiCall)
         {
             var client = new HttpClient();
 
